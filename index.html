@@ -84,21 +84,27 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div style="position:absolute; top:0; left:0; width:100%; height:80vh; display:flex; justify-content:center; align-items:center; gap:20px; z-index:1;">
-  <iframe width="360" height="200" src="https://www.youtube.com/embed/kYCLGOJKDKM?autoplay=1&mute=1&controls=0&loop=1&playlist=kYCLGOJKDKM" frameborder="0" allowfullscreen></iframe>
-  <iframe width="360" height="200" src="https://www.youtube.com/embed/EhmMlWbJ17M?autoplay=1&mute=1&controls=0&loop=1&playlist=EhmMlWbJ17M" frameborder="0" allowfullscreen></iframe>
-</div>
-    <div class="overlay"></div>
-    <div class="content">
-      <img src="beyaz tp krowpath logo.png" alt="Krowpath Logo" />
-      <h2>Video Prodüksiyon Ajansı</h2>
-    </div>
-<div class="scroll-down" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">
-  &#x25BC;
-</div>
+  
+<section class="hero">
+  <!-- ARKA PLAN TAM EKRAN VİDEO -->
+  <iframe 
+    src="https://www.youtube.com/embed/Ht4NExOt-08?autoplay=1&mute=1&controls=0&loop=1&playlist=Ht4NExOt-08"
+    frameborder="0"
+    allow="autoplay; fullscreen"
+    style="position:absolute; top:0; left:0; width:100%; height:100vh; object-fit:cover; z-index:1;">
+  </iframe>
 
-  </section>
+  <div class="overlay"></div>
+  <div class="content">
+    <img src="beyaz tp krowpath logo.png" alt="Krowpath Logo" />
+    <h2>Video Prodüksiyon Ajansı</h2>
+  </div>
+
+  <div class="scroll-down" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">
+    &#x25BC;
+  </div>
+</section>
+
 
   <section id="portfolio">
     <h2 style="text-align:center; margin-bottom:40px;">Projelerimiz</h2>
