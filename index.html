@@ -28,47 +28,29 @@
     .contact button {padding: 12px; background: red; color: white; border: none; cursor: pointer;}
     .socials {text-align: center; margin-top: 40px;}
     .socials a {margin: 0 10px; color: #888; text-decoration: none; font-size: 20px;}
-    
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-  }
-  header img {
-    margin-bottom: 10px;
-  }
-  nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  nav a {
-    margin: 5px 0;
-  }
-  .hero .content h2 {
-    font-size: 1.1rem;
-  }
-}
-
-
-.scroll-down {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  animation: bounce 2s infinite;
-  z-index: 3;
-}
-@keyframes bounce {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, 10px); }
-}
-
-@keyframes fadeIn {
+    @media (max-width: 768px) {
+      header {flex-direction: column; align-items: flex-start; padding: 10px 20px;}
+      header img {margin-bottom: 10px;}
+      nav {display: flex; flex-direction: column; width: 100%;}
+      nav a {margin: 5px 0;}
+      .hero .content h2 {font-size: 1.1rem;}
+    }
+    .scroll-down {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      animation: bounce 2s infinite;
+      z-index: 3;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, 10px); }
+    }
+    @keyframes fadeIn {
       to {opacity: 1; transform: translateY(0);}
     }
   </style>
@@ -84,109 +66,29 @@
     </nav>
   </header>
 
-  
-<section class="hero">
-  <!-- ARKA PLAN TAM EKRAN VİDEO -->
-  <iframe 
-    src="https://www.youtube.com/embed/Ht4NExOt-08?autoplay=1&mute=1&controls=0&loop=1&playlist=Ht4NExOt-08"
-    frameborder="0"
-    allow="autoplay; fullscreen"
-    style="position:absolute; top:0; left:0; width:100%; height:100vh; object-fit:cover; z-index:1;">
-  </iframe>
-
-  <div class="overlay"></div>
-  <div class="content">
-    <img src="beyaz tp krowpath logo.png" alt="Krowpath Logo" />
-    <h2>Video Prodüksiyon Ajansı</h2>
-  </div>
-
-  <div class="scroll-down" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">
-    &#x25BC;
-  </div>
-</section>
-
+  <section class="hero">
+    <iframe 
+      src="https://www.youtube.com/embed/Ht4NExOt-08?autoplay=1&mute=1&controls=0&loop=1&playlist=Ht4NExOt-08"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      style="position:absolute; top:0; left:0; width:100%; height:100vh; object-fit:cover; z-index:1;">
+    </iframe>
+    <div class="overlay"></div>
+    <div class="content">
+      <img src="beyaz tp krowpath logo.png" alt="Krowpath Logo" />
+      <h2>Video Prodüksiyon Ajansı</h2>
+    </div>
+    <div class="scroll-down" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">&#x25BC;</div>
+  </section>
 
   <section id="portfolio">
     <h2 style="text-align:center; margin-bottom:40px;">Projelerimiz</h2>
     <div class="portfolio">
       <iframe src="https://www.youtube.com/embed/kYCLGOJKDKM" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/EhmMlWbJ17M" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/kYCLGOJKDKM" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/Ht4NExOt-08" allowfullscreen></iframe>
     </div>
-<div class="scroll-down" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">
-  &#x25BC;
-</div>
-
+    <div class="scroll-down" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">&#x25BC;</div>
   </section>
-
-  <section id="about">
-    <h2 style="text-align:center; margin-bottom:40px;">Hakkımızda Krowpath</h2>
-    <div class="about">
-      <p style="font-size:1.2rem;margin-bottom:20px;">Krowpath, markanızı ve hikayenizi en yaratıcı şekilde anlatmak için doğdu. İster bir ürün tanıtımı, ister güçlü bir kampanya olsun, her projenin arkasında tutku ve sanatı birleştiriyoruz.</p>
-      <p style="margin-bottom:20px;"><strong>Tanıtım Filmleri:</strong> Şirketinizi ve projelerinizi etkileyici görsellerle öne çıkarıyoruz.</p>
-      <p style="margin-bottom:20px;"><strong>Prodüksiyon Hizmetleri:</strong> Hayal ettiğiniz tüm içerikler için tam prodüksiyon desteği sağlıyoruz.</p>
-      <p style="margin-bottom:20px;"><strong>Drone Çekimi & Fotoğrafçılık:</strong> Yüksekten bakışlar ve etkileyici karelerle hikayenizi farklı bir boyuta taşıyoruz.</p>
-      <p style="margin-top:40px; font-weight:bold;">Bizimle çalışın, sadece bir video değil, bir deneyim yaratın.</p>
-    </div>
-<div class="scroll-down" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">
-  &#x25BC;
-</div>
-
-  </section>
-
-  <section id="contact">
-    <h2 style="text-align:center; margin-bottom:40px;">İletişim Us</h2>
-    <div class="contact">
-      <form action="https://formsubmit.co/info@krowpath.com" method="POST" id="contact-form">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="box">
-    <input type="hidden" name="_subject" value="Yeni İletişim Formu Mesajı - Krowpath">
-        <input type="text" placeholder="Adınız" required />
-        <input type="email" placeholder="E-posta Adresiniz" required />
-        <textarea rows="5" placeholder="Mesajınız" required></textarea>
-        <button type="submit">Mesajı Gönder</button>
-      </form>
-<div id="form-success" style="display:none;color:limegreen;margin-top:20px;font-weight:bold;">Mailiniz iletilmiştir.</div>
-      <div class="socials">
-        <a href="https://www.instagram.com/krowpath/" target="_blank">Instagram</a>
-        <a href="mailto:info@krowpath.com">Email</a>
-        <a href="https://www.youtube.com/@krowpath/" target="_blank">YouTube</a>
-        <a href="https://x.com/krowpath" target="_blank">X</a>
-      </div>
-    </div>
-<div class="scroll-down" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">
-  &#x25BC;
-</div>
-
-  </section>
-
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {threshold: 0.1});
-    document.querySelectorAll('.about, .contact').forEach(el => observer.observe(el));
-  </script>
-
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const form = this;
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        document.getElementById('form-success').style.display = 'block';
-        form.reset();
-      }
-    });
-  });
-</script>
 </body>
-
 </html>
