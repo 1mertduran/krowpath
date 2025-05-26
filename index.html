@@ -27,7 +27,8 @@
     .contact input, .contact textarea {padding: 12px; background: #111; border: 1px solid #444; color: white;}
     .contact button {padding: 12px; background: red; color: white; border: none; cursor: pointer;}
     .socials {text-align: center; margin-top: 40px;}
-    .socials a {margin: 0 10px; color: #888; text-decoration: none; font-size: 20px;}
+    .socials a {margin: 0 10px; text-decoration: none;}
+    .socials img {width: 30px;}
     @media (max-width: 768px) {
       header {flex-direction: column; align-items: flex-start; padding: 10px 20px;}
       header img {margin-bottom: 10px;}
@@ -88,7 +89,66 @@
       <iframe src="https://www.youtube.com/embed/EhmMlWbJ17M" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/Ht4NExOt-08" allowfullscreen></iframe>
     </div>
-    <div class="scroll-down" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">&#x25BC;</div>
   </section>
+
+  <section id="about" class="about">
+    <h2 style="text-align:center; margin-bottom:20px;">Biz Kimiz?</h2>
+    <p style="text-align:center;">
+      Krowpath, yaratıcı vizyonu teknik ustalıkla birleştiren bir video prodüksiyon ajansıdır. 
+      Tanıtım filmleri, reklam çekimleri, drone görüntüleri ve daha fazlasıyla markaların hikâyelerini etkili ve çarpıcı bir şekilde anlatıyoruz.
+      İster sahada ister stüdyoda olalım, her projeye tutkuyla yaklaşır, kurumsal ama samimi bir tonla güçlü işler üretiriz.
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 style="text-align:center; margin-bottom:20px;">Bizimle İletişime Geçin</h2>
+    <form onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('successMessage').style.display='block'; sendMail();">
+      <input type="text" id="name" placeholder="Ad Soyad" required>
+      <input type="email" id="email" placeholder="E-posta" required>
+      <textarea id="message" rows="5" placeholder="Mesajınız" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+    <div id="successMessage" style="display:none; text-align:center; font-size:18px; color:lightgreen;">
+      ✅ Mesajınız gönderildi. Teşekkür ederiz!
+    </div>
+  </section>
+
+  
+  <div class="socials">
+    <a href="https://www.instagram.com/krowpath/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+    <a href="https://www.youtube.com/@krowpath" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+    <a href="https://x.com/krowpath" target="_blank"><img src="x.png" alt="X"></a>
+    <a href="https://www.linkedin.com/in/krowpath/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+  </div>
+
+
+  <script>
+    function sendMail() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      const mailto = `mailto:krowpath@gmail.com?subject=İletişim Formu&body=Ad Soyad: ${name}%0AEmail: ${email}%0AMesaj: ${message}`;
+      window.location.href = mailto;
+    }
+  </script>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.about, .contact').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+  <footer style="text-align: center; padding: 40px 0; font-size: 14px; color: #666;">
+    © 2025 Krowpath tarafından saklıdır.
+  </footer>
 </body>
+
 </html>
