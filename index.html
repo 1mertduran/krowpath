@@ -29,6 +29,7 @@
     .socials {text-align: center; margin-top: 40px;}
     .socials a {margin: 0 10px; text-decoration: none;}
     .socials img {width: 30px;}
+    footer {text-align: center; padding: 40px 0; font-size: 14px; color: #666;}
     @media (max-width: 768px) {
       header {flex-direction: column; align-items: flex-start; padding: 10px 20px;}
       header img {margin-bottom: 10px;}
@@ -102,35 +103,20 @@
 
   <section id="contact" class="contact">
     <h2 style="text-align:center; margin-bottom:20px;">Bizimle İletişime Geçin</h2>
-    <form onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('successMessage').style.display='block'; sendMail();">
-      <input type="text" id="name" placeholder="Ad Soyad" required>
-      <input type="email" id="email" placeholder="E-posta" required>
-      <textarea id="message" rows="5" placeholder="Mesajınız" required></textarea>
+    <form action="https://formspree.io/f/moqglkqk" method="POST">
+      <input type="text" name="name" placeholder="Ad Soyad" required>
+      <input type="email" name="_replyto" placeholder="E-posta" required>
+      <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
       <button type="submit">Gönder</button>
     </form>
-    <div id="successMessage" style="display:none; text-align:center; font-size:18px; color:lightgreen;">
-      ✅ Mesajınız gönderildi. Teşekkür ederiz!
-    </div>
   </section>
 
-  
   <div class="socials">
     <a href="https://www.instagram.com/krowpath/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
     <a href="https://www.youtube.com/@krowpath" target="_blank"><img src="youtube.png" alt="YouTube"></a>
     <a href="https://x.com/krowpath" target="_blank"><img src="x.png" alt="X"></a>
     <a href="https://www.linkedin.com/in/krowpath/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
   </div>
-
-
-  <script>
-    function sendMail() {
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
-      const mailto = `mailto:krowpath@gmail.com?subject=İletişim Formu&body=Ad Soyad: ${name}%0AEmail: ${email}%0AMesaj: ${message}`;
-      window.location.href = mailto;
-    }
-  </script>
 
   <script>
     const observer = new IntersectionObserver(entries => {
@@ -146,9 +132,8 @@
     });
   </script>
 
-  <footer style="text-align: center; padding: 40px 0; font-size: 14px; color: #666;">
+  <footer>
     © 2025 Krowpath tarafından saklıdır.
   </footer>
 </body>
-
 </html>
